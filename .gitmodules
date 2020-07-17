@@ -1,0 +1,3 @@
+[submodule "ds-token"]
+	path = ds-token
+	url = git@github.com:makerdao/ds-token.git
