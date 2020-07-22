@@ -6,7 +6,7 @@ specs: dapp
 dapp:
 	git submodule sync --recursive
 	git submodule update --init --recursive
-	cd ds-token && dapp --use solc:0.6.7 build
+	cd ds-token && SOLC_FLAGS="--optimize --optimize-runs 999999" dapp --use solc:0.6.7 build
 
 .PHONY: clean
 clean:
