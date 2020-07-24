@@ -40,7 +40,7 @@ rule (removeStopped &Int ((B *Int pow160) +Int A)) => A
 rule pow160 |Int A => 1 *Int pow160 +Int A
   requires #rangeAddress(A)
 
-rule ((((B *Int pow160) +Int A) &Int maxUInt160) ==K A) => true
+rule (((B *Int pow160) +Int A) &Int maxUInt160) => A
   requires #rangeAddress(A)
   andBool #rangeUInt(8, B)
 
